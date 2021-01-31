@@ -3,6 +3,6 @@ http://localhost/FMS_MDbootstrapdesign/Private_Dashboard/
 email: joneltoledo@yahoo.com
 password: toledo123
 
-http://localhost/FMS_MDbootstrapdesign/user_login/
+http://localhost/FMS_MDbootstrapdesign/private_user/
 email: nario@gmail.com
 password: nario123
