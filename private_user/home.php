@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-// include('Private_Dashboard/include/connection.php');
+// include('Admin/include/connection.php');
 session_start();
 if(!isset($_SESSION["email_address"])){
     header("location:../login.html");
@@ -193,11 +193,8 @@ if(!isset($_SESSION["email_address"])){
 </tbody>
    </table>
     </div>
- 
-
 
 </script>
-
 
  <div class="col-md-3" style="border-top: 4px solid #17a2b8;border-radius: 4px;  box-shadow: 0px 1px 1px 0px  #6c757d;"><br>
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
