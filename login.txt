@@ -1,8 +1,10 @@
 
+Admin Login:-
 http://localhost/FMS_MDbootstrapdesign/Admin/
 email: joneltoledo@yahoo.com
 password: toledo123
 
+User Login:-
 http://localhost/FMS_MDbootstrapdesign/User/
 email: nario@gmail.com
 password: nario123
