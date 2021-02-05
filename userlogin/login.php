@@ -1,20 +1,14 @@
 <?php 
 
 require_once("../include/connection.php");
-
 session_start();
 
 if(isset($_POST["logIn"])){
 
   date_default_timezone_set("asia/manila");
   $date = date("M-d-Y h:i A",strtotime("+0 HOURS"));
-
- $username = mysqli_real_escape_string($conn, $_POST["email_address"]);  
- $password = mysqli_real_escape_string($conn, $_POST["user_password"]);
-
-// $pass=sha1($pass1);
-// $salt="a1Bz20ydqelm8m1nel";
-// $pass1=$salt.$pass;
+  $username = mysqli_real_escape_string($conn, $_POST["email_address"]);  
+  $password = mysqli_real_escape_string($conn, $_POST["user_password"]);
 
 $query=mysqli_query($conn,"SELECT * FROM  login_user WHERE email_address = '$username'")or die(mysqli_error($conn));
 		$row=mysqli_fetch_array($query);
@@ -51,8 +45,6 @@ $query=mysqli_query($conn,"SELECT * FROM  login_user WHERE email_address = '$use
 							}
 
 							$host = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-
-
                            $remarks="Has LoggedIn the system at";  
                       
                           mysqli_query($conn,"INSERT INTO history_log(id,email_address,action,ip,host,login_time) VALUES('$id','$user','$remarks','$ip','$host','$date')")or die(mysqli_error($conn));
@@ -62,4 +54,3 @@ $query=mysqli_query($conn,"SELECT * FROM  login_user WHERE email_address = '$use
 	  }
    }
 ?>
-
