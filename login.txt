@@ -1,5 +1,5 @@
 
-http://localhost/FMS_MDbootstrapdesign/Private_Dashboard/
+http://localhost/FMS_MDbootstrapdesign/Admin/
 email: joneltoledo@yahoo.com
 password: toledo123
 
