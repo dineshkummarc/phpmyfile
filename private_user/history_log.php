@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-// include('Private_Dashboard/include/connection.php');
+// include('Admin/include/connection.php');
 session_start();
 if(!isset($_SESSION["email_address"])){
     header("location:../login.html");
@@ -23,13 +23,11 @@ if(!isset($_SESSION["email_address"])){
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
 
-
 <!-- 
 <link href="css/addons/datatables.min.css" rel="stylesheet">
 <script href="js/addons/datatables.min.js" rel="stylesheet"></script>
 <link href="css/addons/datatables-select.min.css" rel="stylesheet">
 <script href="js/addons/datatables-select.min.js" rel="stylesheet"></script> -->
-
 
 <!-- <link rel="stylesheet" id="font-awesome-style-css" href="http://phpflow.com/code/css/bootstrap3.min.css" type="text/css" media="all">
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script> -->
@@ -72,8 +70,6 @@ if(!isset($_SESSION["email_address"])){
   width: 600px;
     }*/
 
-
-
   </style>
 
     <script src="jquery.min.js"></script>
@@ -95,9 +91,7 @@ if(!isset($_SESSION["email_address"])){
 
      require_once("include/connection.php");
 
-
    $id = mysqli_real_escape_string($conn,$_SESSION['email_address']);
-
 
   $r = mysqli_query($conn,"SELECT * FROM login_user where id = '$id'") or die (mysqli_error($con));
 
@@ -181,8 +175,7 @@ if(!isset($_SESSION["email_address"])){
          $action =  $file['action'];
          $logintime =  $file['login_time'];
          $actions =  $file['actions'];
-         $logouttime =  $file['logout_time'];
-      
+         $logouttime =  $file['logout_time']; 
     
       ?>
      
@@ -200,11 +193,8 @@ if(!isset($_SESSION["email_address"])){
 </tbody>
    </table>
     </div>
- 
-
 
 </script>
-
 
  <div class="col-md-3" style="border-top: 4px solid #17a2b8;border-radius: 4px;  box-shadow: 0px 1px 1px 0px  #6c757d;"><br>
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -277,7 +267,6 @@ if(!isset($_SESSION["email_address"])){
  </div>
 </div>
 </div>
-
 
 <!-- Card -->
   <!-- /Start your project here-->
