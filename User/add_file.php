@@ -231,7 +231,7 @@ height:0;
  </center>
 
     <div class="footer-copyright py-3">
-       <p>All right Reserved &copy; <?php echo date('Y');?> Created By:JunilToledo</p>
+       <p>All right Reserved &copy; <?php echo date('Y');?></p>
     </div>
     <!--/.Copyright-->
 
